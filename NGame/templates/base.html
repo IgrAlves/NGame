@@ -1,0 +1,114 @@
+
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block title %}
+        {% endblock %}
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
+        <script src="{% static 'assets/js/scripts.js' %}"></script>
+        
+        
+        <script>
+            var svg = document.getElementById('btlike').querySelector("svg");
+            svg.addEventListener('click', liked);
+        </script>     
+        
+        <style>
+            .cartt{
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-radius: 50%;
+                padding: 0px 5px 0px ;
+                text-align: center;
+                font-weight: normal;
+                color: #fff;
+                font-size: 13px;
+                background-color: crimson;
+            }
+            *{
+                font-family: 'Courier New', Courier, monospace;
+               
+            }
+            .logo{
+                font-family: Impact;
+            }
+            .tr{
+            color: rgb(0, 0, 0);
+            }
+            nav a{
+            color:rgb(0, 0, 0);
+            text-decoration: none;
+            
+            }
+            hr{
+                background-color: #000;
+                height: 3px;
+            }
+            .carousel-inner{
+            max-height:600px;
+            }
+            .text{
+            font-size: 11px;
+            }
+            hr{ 
+            border: 1px solid #000;
+            
+            }
+            .h1-1{
+            font-size: 46px;
+            }
+            #m{
+            margin-right: 0;
+            }
+           
+            .like-button {
+                fill: white;
+                stroke: #000;
+            }
+        
+            .liked {
+                background-image: url(fill-heart.svg);
+                background-color: red;
+                fill: red;
+                stroke: red;
+            }
+        
+            .like-button i {
+                margin-right: 8px;
+            }
+
+
+            @media screen and (max-width: 450px){
+            .fs-5{
+                font-size: 15px!important;
+                }
+            } 
+        </style>
+        {% block script %} 
+        {% endblock %}  
+    </head>
+	<body>
+    {% include "partials/_navbar.html" %}
+    {% include "partials/_messages.html" %}
+    {% block content %} 
+    {% endblock %}
+    <!-- Scripts -->
+        {% include 'partials/_footer.html' %}
+        {% include "partials/_register.html" %}
+        {% include "partials/_login.html" %}
+      
+        
+        <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+        <script src="{% static 'assets/js/browser.min.js' %}"></script>
+        <script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+        <script src="{% static 'assets/js/util.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+        <script src="{% static 'assets/js/scripts.js' %}"></script>
+	</body>
+</html>

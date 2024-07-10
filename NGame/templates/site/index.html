@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+<title>GameCatalog</title>
+{% endblock %}
+
+
+{% block content %}
+{% include "partials/_alerts.html"%}
+    
+
+  <!--Header Inicio-->
+  <!--Header Fim-->
+  <!--Main Inicio-->  
+    <main>
+        <div class="d-flex pt-3 sect-az" >
+          <div class="row" id="m" style="justify-content: space-around;">
+
+            {% include 'partials/_card.html' %}
+            {% include 'partials/_details.html' %}
+                
+          </div>      
+        </div>        
+      </section>
+                           
+      <div><br></div>
+    </main>
+  <!--Main Fim-->
+  <!--Footer Inicio-->
+  
+    
+  <!--Footer Fim-->  
+{% endblock %}

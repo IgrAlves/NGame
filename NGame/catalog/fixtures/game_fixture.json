@@ -1,0 +1,72 @@
+[
+    {
+        "model": "users.user",
+        "pk": 1,
+        "fields":{
+            "username": "igor",
+            "password": "pbkdf2_sha256$720000$egjj6BOk8NbD63tI1cMjE6$6GJMZbK+W3Aqa4zrlatYuFwfGw3xkGeJEZ9fV70fSZM=",
+            "email": "igoralves@gmail.com"
+        }
+    },
+    {
+        "model": "catalog.game",
+        "pk": 1,
+        "fields":{
+            "title": "Rainbow Six Siege",
+            "path": "img/2024/07/08/r6.png",
+            "description": "jogo 1", 
+            "price": 30,
+            "stocked": 100   
+        }
+    },
+    {
+        "model": "catalog.like",
+        "pk": 1,
+        "fields":{
+            "game_id": 1,
+            "user_id": 1  
+        }
+    },
+    {
+        "model": "catalog.comment",
+        "pk": 1,
+        "fields":{
+            "content": "nvn",
+            "user_id": 1,
+            "game_id": 2
+        }
+    },
+    {    
+        "model": "catalog.game",
+        "pk": 2,
+        "fields":{
+            "title": "Counter Strike 2",
+            "path": "img/2024/07/08/cs2.png",
+            "description": "jogo 2", 
+            "price": 79,
+            "stocked": 100   
+    }
+    },
+    {    
+        "model": "catalog.game",
+        "pk": 3,
+        "fields":{
+            "title": "Nba2K29",
+            "path": "img/2024/07/08/nba.png",
+            "description": "jogo 3", 
+            "price": 200,
+            "stocked": 100   
+    }
+    },
+    {    
+        "model": "catalog.game",
+        "pk": 4,
+        "fields":{
+            "title": "Red Dead Redemption 2",
+            "path": "img/2024/07/08/rdr2.png",
+            "description": "jogo 4", 
+            "price": 200,
+            "stocked": 100   
+    }
+    }
+]
